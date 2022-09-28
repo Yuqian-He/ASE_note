@@ -86,7 +86,9 @@ When I compile g++ like this, it comes out a **a.out** file
 
 - use **-o** to rename this file
 
-<https://blog.csdn.net/weixin_33328213/article/details/116554724?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166437137916782417011764%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=166437137916782417011764&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~pc_rank_34-1-116554724-null-null.142^v50^pc_rank_34_queryrelevant25,201^v3^control_2&utm_term=g%2B%2B%20-c%20hello.cpp&spm=1018.2226.3001.4187>
+![](assets/2022-09-29-03-35-33.png)
+
+- 程序 g++ 是将 gcc 默认语言设为 C++ 的一个特殊的版本，链接时它自动使用 C++ 标准库而不用 C 标准库。通过遵循源码的命名规范并指定对应库的名字，用 gcc 来编译链接 C++ 程序是可行的
 
 ## flag
 
@@ -98,5 +100,24 @@ When I compile g++ like this, it comes out a **a.out** file
 ![ ](./assets/Screenshot%20from%202022-09-28%2015-43-45.png)
 
 ## clang++ vs g++
+### GCC----GNU Compiler Collection
 
-<https://blog.csdn.net/forcj/article/details/117531228?ops_request_misc=&request_id=&biz_id=102&utm_term=clang++%20g++&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-117531228.142^v50^pc_rank_34_queryrelevant25,201^v3^control_2&spm=1018.2226.3001.4187>
+> GUN编译器集合，包括gcc和g++编译器，它可以编译C、C++、JAV、Fortran、Pascal、Object-C、Ada等语言。
+
+- gcc是GCC中的GUN C Compiler（C 编译器）
+- g++是GCC中的GUN C++ Compiler（C++编译器）
+
+> 是GNU项目的关键部分，亦是自由的类Unix及苹果电脑Mac OS X 操作系统的标准编译器。GCC（特别是其中的C语言编译器）也常被认为是跨平台编译器的事实标准。
+
+gcc和g++的主要区别
+
+- 对于 .c和.cpp文件，gcc分别当做c和cpp文件编译（c和cpp的语法强度是不一样的）
+
+- 对于 .c和.cpp文件，g++则统一当做cpp文件编译
+
+- 使用g++编译文件时，g++会自动链接标准库STL，而gcc不会自动链接STL
+
+### Clang
+一个C、C++、Objective-C和Objective-C++编程语言的**编译器前端**。包括Clang前端和Clang静态分析器等.它采用了**底层虚拟机（LLVM）作为其后端**，目标是提供一个GNU编译器套装（GCC）的替代品。苹果公司的赞助支持下进行开发，而源代码授权是使用类BSD的伊利诺伊大学厄巴纳-香槟分校开源码许可。兼容GCC，也是跨平台。
+
+- It has the best error reporting and diagnostics of the two compilers
