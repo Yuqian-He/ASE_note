@@ -21,6 +21,7 @@
 # Single File Inclusion (avoid not being include mang times)
 
 ## #pragma once
+the same with #ifndef/#define
 
 ## #ifndef/#define
 
@@ -47,15 +48,34 @@ C++程序还会用到一项预处理功能的头文件保护符，头文件保�
 
 - #pragma依赖于编译器，所以一些老的编译器不提供（比如说vc6之前），而#ifndef可移植性非常好。
 
-
 # Program Libraries
+
 > Program = set of modules (files)
 > Function interfaces - defined using library files.
 > Libraries give us code reuse across programs (good thing!)
 > However we need to have available
+>
 > - Header Files & Implementation files
 > - Compiled Library Files.
 
+# Code as Modules
 
+> With C++ we create classes which contain all the functionality required of the thing we are going to represent.
 
+# build process
 
+> create code like this
+
+![ ](./assets/Screenshot%20from%202022-09-29%2019-55-45.png)
+
+> should first compile .o file, that transfer programming language to machine language
+
+![ ](./assets/Screenshot%20from%202022-09-29%2019-58-55.png)
+![ ](./assets/Screenshot%20from%202022-09-29%2019-59-09.png)
+
+>than build them all to create executable file
+
+![ ](./assets/Screenshot%20from%202022-09-29%2020-02-18.png)
+![ ](./assets/Screenshot%20from%202022-09-29%2020-02-50.png)
+
+## Automating the Build process
