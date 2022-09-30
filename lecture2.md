@@ -78,4 +78,71 @@ C++程序还会用到一项预处理功能的头文件保护符，头文件保�
 ![ ](./assets/Screenshot%20from%202022-09-29%2020-02-18.png)
 ![ ](./assets/Screenshot%20from%202022-09-29%2020-02-50.png)
 
-## Automating the Build process
+# makefile
+
+makefile 指的是一个叫 makefile 的文件，里面提前写了一些指令。每次要自动化的完成一个比较复杂项目的自动编译用的时候，就在命令行输入“make”命令。使用Makefile可以 “智能” 的知道：
+
+- 哪些文件需要先进行编译。
+- 当某一文件在某次make命令之后发生了改变。再一次使用make命令的时候Makefile只会针对变化的部分相关文件进行重新编译，而其他的不做任何改变，所以在效率上比较高。
+
+> The syntax and whitespace rules can be problematic
+
+> Makefiles can be complicated to generate especially for large projects
+
+> Best to use a meta language / tool to generate the Makefiles
+
+> We will use two
+
+## qmake
+
+> Is a system which allows the automatic generation of Makefiles from within the Qt development environment
+
+>In QT
+
+## cmake
+
+cmake is a tool that manages the build process for us in an operating system and compiler independent is credibly powerful and has a clunky language syntax.
+
+why?
+>  Make 工具:  GNU Make ，QT 的 qmake ，微软的 MS nmake，BSD Make（pmake），Makepp，等等. 如果软件想跨平台，必须要保证能够在不同平台编译。而如果使用上面的 Make 工具，就得为每一种标准写一次 Makefile.
+
+> CMake 就是针对上面问题所设计的工具：它首先允许开发者编写一种平台无关的 CMakeList.txt 文件来定制整个编译流程，然后再根据目标用户的平台进一步生成所需的本地化 Makefile 和工程文件，如 Unix 的 Makefile 或 Windows 的 Visual Studio 工程。从而做到“Write once, run everywhere”。显然，CMake 是一个比上述几种 make 更高级的编译配置工具。
+
+![ ](./assets/Screenshot%20from%202022-09-30%2015-17-21.png)
+
+### single file
+
+![ ](./assets/Screenshot%20from%202022-09-30%2015-42-05.png)
+
+> then code **cmake .** to generate makefile and code **make** to generate excutable file.
+
+![ ](./assets/Screenshot%20from%202022-09-30%2015-49-55.png)
+
+### multiple file(in one root)
+
+![ ](./assets/Screenshot%20from%202022-09-30%2016-03-32.png)
+
+> we should change CMakeLists.txt a little bit
+
+![ ](./assets/Screenshot%20from%202022-09-30%2016-06-24.png)
+
+> or we can also change it like that
+
+![ ](./assets/Screenshot%20from%202022-09-30%2016-08-08.png)
+
+### multiple file (in different file)
+
+![ ](./assets/Screenshot%20from%202022-09-30%2016-31-20.png)
+
+>对于这种情况，需要分别在项目根目录**5**和**foo**目录里各编写一个 CMakeLists.txt 文件。为了方便，我们可以先将 foo 目录里的文件编译成静态库再由 main 函数调用。
+
+![ ](./assets/Screenshot%20from%202022-09-30%2016-35-02.png)
+
+>第3行，使用命令 add_subdirectory 指明本项目包含一个子目录 foo，这样 foo 目录下的 CMakeLists.txt 文件和源代码也会被处理 。第6行，使用命令 target_link_libraries 指明可执行文件 main 需要连接一个名为 foo 的链接库 。
+
+![ ](./assets/Screenshot%20from%202022-09-30%2016-37-55.png)
+
+> 在该文件中使用命令 add_library 将 src 目录中的源文件编译为静态链接库。
+
+<https://www.hahack.com/codes/cmake/>
+
