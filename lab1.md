@@ -56,3 +56,4 @@ fmt use **-DFMT_HEADER_ONLY**, so we do not need use the -L/-l flag
 
 ![ ](./assets/Screenshot%20from%202022-10-01%2016-21-50.png)
 
+![ ](./assets/Screenshot%20from%202022-10-01%2017-07-49.png)
