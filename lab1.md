@@ -6,6 +6,8 @@ vcpkg 自身也是使用 C++ 开发的 (而其他的 C++ 包管理大多并不�
 
 vcpkg 整合了 git,构建系统整合的 CMake,而绝大多数的 C++ 项目都可以直接或者间接的方式使用 CMake创建原生项目文件并构建.
 
+# fmt
+
 > start this project
 
 ![ ](./assets/Screenshot%20from%202022-10-01%2015-15-09.png)
@@ -32,9 +34,25 @@ format library: <https://en.cppreference.com/w/cpp/utility/format>
 
 > first include the search path, find **include<fmt/format.h>**, than add the library search path, allow the function defination in this header can find the function.
 
-# static library
+# library
 
 > lib include lots of .a file
 
 ![ ](./assets/Screenshot%20from%202022-10-01%2015-36-45.png)
+
+> it's static library. By default vcpkg builds **static libraries** under linux.By default the linker will use a **.so** file if found else will search for the **.a** version. 
+
+![ ](./assets/Screenshot%20from%202022-10-01%2015-56-46.png)
+
+# Header Only Libraries
+
+fmt use **-DFMT_HEADER_ONLY**, so we do not need use the -L/-l flag
+
+![ ](./assets/Screenshot%20from%202022-10-01%2016-03-08.png)
+
+# using cmake to automating the build
+
+>First we will create a CMakeLists.txt file in the root of the project directory.
+
+![ ](./assets/Screenshot%20from%202022-10-01%2016-21-50.png)
 
