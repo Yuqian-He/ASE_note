@@ -77,6 +77,35 @@ int sizeOfArray=sizeof(primesLT100)/sizeof(int);
 
 ![ ](./assets/Screenshot%20from%202022-10-05%2016-48-54.png)
 
-## std::array
+## about array a/ a[0]/*a/&a
 
+![ ](./assets/Screenshot%20from%202022-10-05%2017-53-50.png)
+![ ](./assets/Screenshot%20from%202022-10-05%2017-54-00.png)
+
+- a[0]is the first element of an array
+- *a is the element which pointed by address
+- &a is the address of array but also the address of first element
+
+## C++中int a[10]和int* a=new int[10]有什么区别
+
+![ ](./assets/Screenshot%20from%202022-10-05%2018-16-19.png)
+
+![ ](./assets/Screenshot%20from%202022-10-05%2018-16-33.png)
+
+> the different thing between them is the way memory allocation
+int* a=new int[10] : 
+
+- a is the address of new array
+- a* is the first element of new array
+- &a is the address of a
+- if you want to change the element of new array,you should :
+
+![ ](./assets/Screenshot%20from%202022-10-05%2018-29-25.png)
+![ ](./assets/Screenshot%20from%202022-10-05%2018-29-37.png)
+
+so the reason why pointers cause sizeof didn't work is **(sizeof(p)/sizeof(*p))** is wrong. 
+- sizeof(*p) still point to the first element of new array
+- sizeof(p) just the address of p which store the address of new array.
+
+## std::array
 
