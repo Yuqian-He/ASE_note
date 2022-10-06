@@ -132,4 +132,10 @@ auto用于推断类型，具体可用于声明变量时根据初始化表达式�
 - **auto &** points to the address of original store and change it directely
 ![ ](./assets/Screenshot%20from%202022-10-06%2011-56-22.png)
 
+<https://pythontutor.com/>
+
+# structures
+
+
+
 
