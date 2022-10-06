@@ -134,7 +134,12 @@ auto用于推断类型，具体可用于声明变量时根据初始化表达式�
 
 <https://pythontutor.com/>
 
-# structures
+# unions
+> In a union, every member is allocated the same piece of storage
+
+## difference between unions and structure
+ ![ ](./assets/Screenshot%20from%202022-10-06%2019-39-53.png)
+ 
 
 
 
