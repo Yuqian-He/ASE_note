@@ -108,4 +108,28 @@ so the reason why pointers cause sizeof didn't work is **(sizeof(p)/sizeof(*p))*
 - sizeof(p) just the address of p which store the address of new array.
 
 ## std::array
+more in a later lecture
+
+# auto
+
+![ ](./assets/Screenshot%20from%202022-10-06%2011-31-37.png)
+
+## 用在哪
+
+auto用于推断类型，具体可用于声明变量时根据初始化表达式自动推断该变量的类型，也就是可用在for循环。
+也可以用于声明函数返回值的占位符。
+
+## auto and 原数组
+![ ](./assets/Screenshot%20from%202022-10-06%2011-50-23.png)
+
+## auto &
+![ ](./assets/Screenshot%20from%202022-10-06%2011-51-41.png)
+
+## different
+- **auto** open a new memery to store the data, it's a copy of the original data
+![ ](./assets/Screenshot%20from%202022-10-06%2011-54-12.png)
+
+- **auto &** points to the address of original store and change it directely
+![ ](./assets/Screenshot%20from%202022-10-06%2011-56-22.png)
+
 
