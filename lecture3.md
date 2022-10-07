@@ -119,6 +119,9 @@ more in a later lecture
 auto用于推断类型，具体可用于声明变量时根据初始化表达式自动推断该变量的类型，也就是可用在for循环。
 也可以用于声明函数返回值的占位符。
 
+> change it convinence
+![ ](./assets/Screenshot%20from%202022-10-07%2019-56-41.png)
+
 ## auto and 原数组
 ![ ](./assets/Screenshot%20from%202022-10-06%2011-50-23.png)
 
@@ -133,6 +136,7 @@ auto用于推断类型，具体可用于声明变量时根据初始化表达式�
 ![ ](./assets/Screenshot%20from%202022-10-06%2011-56-22.png)
 
 <https://pythontutor.com/>
+
 
 # unions
 > In a union, every member is allocated the same piece of storage
