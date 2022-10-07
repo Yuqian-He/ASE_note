@@ -33,3 +33,24 @@ This header is part of the type support library, providing fixed width integer t
 # nullptr
 C++ 11 introduces the nullptr type. It should replace NULL and you should just use it wherever you used to use NULL
 
+# constexpr
+> constexpr allows for computation to now take place at compile time rather than runtime
+
+> This means that code using this will not need to do the computation at runtime (for example evaluating a cos or sine function on a know value)
+
+when add constexpr, this function conculate in compile
+![ ](./assets/Screenshot%20from%202022-10-07%2020-11-22.png)
+
+![ ](./assets/Screenshot%20from%202022-10-07%2020-11-59.png)
+
+<https://www.youtube.com/watch?v=PJwd4JLYJJY>
+
+## limitation
+- It must consist of single return statement (with a few exceptions)
+- It can call only other constexpr functions
+- It can reference only constexpr global variables
+
+# lambda
+another expression of the function
+
+![ ](./assets/Screenshot%20from%202022-10-07%2020-54-20.png)
