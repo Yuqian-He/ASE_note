@@ -1,3 +1,14 @@
+- [enum](#enum)
+  - [use enum class](#use-enum-class)
+  - [conver deftype to int](#conver-deftype-to-int)
+  - [define enum class](#define-enum-class)
+  - [use enum class](#use-enum-class-1)
+- [cstdint](#cstdint)
+- [nullptr](#nullptr)
+- [constexpr](#constexpr)
+  - [limitation](#limitation)
+- [lambda](#lambda)
+
 # enum
 枚举类型 (enumeration)，是C++中的一种派生数据类型，是用户创建的一个集合，可以增加程序的可读性，在一些需要重复用到一些元素时颇有益处。 
 
@@ -54,3 +65,5 @@ when add constexpr, this function conculate in compile
 another expression of the function
 
 ![ ](./assets/Screenshot%20from%202022-10-07%2020-54-20.png)
+
+<https://en.cppreference.com/w/cpp/language/lambda>
