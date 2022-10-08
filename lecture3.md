@@ -1,3 +1,22 @@
+- [namespace](#namespace)
+  - [为什么使用命名空间](#为什么使用命名空间)
+  - [命名空间的定义](#命名空间的定义)
+- [sizeof()](#sizeof)
+  - [special sizeof](#special-sizeof)
+  - [openGL Buffer Object](#opengl-buffer-object)
+  - [cuda memory models](#cuda-memory-models)
+- [arrays](#arrays)
+  - [about array a/ a[0]/*a/&a](#about-array-a-a0aa)
+  - [C++中int a[10]和int* a=new int[10]有什么区别](#c中int-a10和int-anew-int10有什么区别)
+  - [std::array](#stdarray)
+- [auto](#auto)
+  - [用在哪](#用在哪)
+  - [auto and 原数组](#auto-and-原数组)
+  - [auto &](#auto-)
+  - [different](#different)
+- [unions](#unions)
+  - [difference between unions and structure](#difference-between-unions-and-structure)
+
 # namespace
 
 ## 为什么使用命名空间

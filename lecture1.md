@@ -1,3 +1,17 @@
+- [Animation Software Engineering](#animation-software-engineering)
+- [What we will use](#what-we-will-use)
+- [NCCA Graphics Library （ngl::）](#ncca-graphics-library-ngl)
+- [CPP Core Guidelines](#cpp-core-guidelines)
+- [helloWorld.cpp](#helloworldcpp)
+  - [It's bad version](#its-bad-version)
+  - [It's better](#its-better)
+- [Compilation process](#compilation-process)
+  - [compile](#compile)
+  - [flag](#flag)
+  - [clang++ vs g++](#clang-vs-g)
+    - [GCC----GNU Compiler Collection](#gcc----gnu-compiler-collection)
+    - [Clang](#clang)
+
 # Animation Software Engineering
 - Using C++ to develop Graphics application
 - Develop 2D / 3D Applications and Tools
